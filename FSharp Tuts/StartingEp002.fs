@@ -8,24 +8,35 @@ type Item =
         Details: Details
     }
 
-
 type Exit =
     | PassableExit of Details * destination: Room
-    | LockedExit of Details * key:Item
-    | NoExit
+    | LockedExit of Details * key:Item *next:Exit
+    | NoExit of Details option
 
-type Exits =
+and Exits =
     {   
         North: Exit
         South: Exit
         West : Exit
         East : Exit
     }
-    
 
-
-type Room =
+and Room =
     {
         Details: Details 
+        Items: Item list
         Exits: Exits
     }
+
+let firstRoom =
+    {
+        Details = {Name = "first Room "; Description = "You are in First Room"};
+        Items = [];
+        Exits =
+         {
+            North = NoExit(None);
+            South = NoExit(None);
+            West = NoExit(None);
+            East = NoExit(None)
+            }
+     }    
