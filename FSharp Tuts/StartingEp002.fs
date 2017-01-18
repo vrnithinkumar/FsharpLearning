@@ -7,7 +7,7 @@ type Item =
     {
         Details: Details
     }
-    
+
 
 type Exit =
     | PassableExit of Details * destination: Room
@@ -21,6 +21,7 @@ type Exits =
         West : Exit
         East : Exit
     }
+    
 
 
 type Room =
