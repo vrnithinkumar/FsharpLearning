@@ -57,7 +57,7 @@ type World =
 //            South = NoExit(None);
 //            West = NoExit(None);
 //            East = NoExit(None)
-//            }
+//            }                         
 //     }    
 
 
