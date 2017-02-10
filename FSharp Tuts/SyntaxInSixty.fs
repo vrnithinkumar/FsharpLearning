@@ -35,3 +35,23 @@ evens oneToFive |> List.iter(fun x -> printfn "even : %d" x) // Now run the func
 
 
 printfn "What is this"
+
+let seq2 = seq { yield "hello"; yield "world"; yield "and"; yield "hello"; yield "world"; yield "again" }
+printfn "%A" seq2
+
+module x =
+    let rnd = System.Random()
+
+    /// This is an infinite sequence which is a random walk.
+    /// This example uses yield! to return each element of a subsequence.
+    let rec randomWalk x =
+        seq { yield x
+              yield! randomWalk (x + rnd.NextDouble() - 0.5) }
+
+    /// This example shows the first 100 elements of the random walk.
+    let first100ValuesOfRandomWalk = 
+        randomWalk 5.0 
+        |> Seq.truncate 100
+        |> Seq.toList
+
+    printfn "First 100 elements of a random walk: %A" first100ValuesOfRandomWalk

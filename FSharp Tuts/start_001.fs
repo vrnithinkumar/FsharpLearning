@@ -15,5 +15,5 @@ names
 |> Seq.sort 
 
 
-let testing = List.map (fun x -> x * x) [1;2;4]
+let testing = List.map (fun x -> x * x) [5]
 testing
