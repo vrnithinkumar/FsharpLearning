@@ -1,0 +1,5 @@
+z:\Pandora\GitHub\Fsharp\FSharp Tuts\DemoProj\bin\Debug\DemoProj.exe.config
+z:\Pandora\GitHub\Fsharp\FSharp Tuts\DemoProj\bin\Debug\DemoProj.exe
+z:\Pandora\GitHub\Fsharp\FSharp Tuts\DemoProj\bin\Debug\FSharp.Core.dll
+z:\Pandora\GitHub\Fsharp\FSharp Tuts\DemoProj\bin\Debug\FSharp.Core.xml
+z:\Pandora\GitHub\Fsharp\FSharp Tuts\DemoProj\obj\Debug\DemoProj.fsprojResolveAssemblyReference.cache
