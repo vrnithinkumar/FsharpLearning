@@ -33,3 +33,9 @@ let aceSpades = Spade, Ace
 
 compareCard aceHearts twoHearts 
 compareCard twoHearts aceSpades
+
+// Partial Application
+let  add x y = printfn "x : %d y : %d " x y
+let addOne = add 4
+let vals = addOne 5
+//printfn "Val %d" vals
