@@ -39,3 +39,17 @@ let  add x y = printfn "x : %d y : %d " x y
 let addOne = add 4
 let vals = addOne 5
 //printfn "Val %d" vals
+
+//define a "safe" email address type
+type EmailAddress = EmailAddress of string
+
+//define a function that uses it 
+let sendEmail (EmailAddress email) = 
+   printfn "sent an email to %s" email
+
+//try to send one
+let aliceEmail = EmailAddress "alice@example.com"
+sendEmail aliceEmail
+
+//try to send a plain string
+sendEmail (None)  //error
